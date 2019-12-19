@@ -55,19 +55,37 @@ public class Reindeer
     public void changeName(String name)
     {
         // TODO: code here
-        
+        this.name = name;
     }
     
     public void setNoseAbility(boolean nG)
     {
         // TODO: code here (don't forget to also update totalLights)
-        
+        if (nG)
+        {
+            if (!noseGlows)
+            {
+                noseGlows = true;
+                totalLights++;
+            }
+            else noseGlows = true;
+        }
+        else
+        {
+            if (noseGlows)
+            {
+                noseGlows = false;
+                totalLights--;
+            }
+            else noseGlows = false;
+        }
     }
     
     public void changeEnergy(int amountOfChange)
     {
         // TODO: code here (don't forget to also update totalEnergy)
-        
+        totalEnergy+= amountOfChange;
+        energy+= amountOfChange;
     }
     
     // interesting description of the reindeer
