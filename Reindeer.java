@@ -74,7 +74,11 @@ public class Reindeer
     public String toString()
     {
         // TODO: code here
-        return "interesting description";
+        if(this.doesNoseGlow() == true) {
+       
+            return this.getName() + "has a glowing nose and an energy level of: "+ this.getEnergyLevel();
+        }
+        return this.getName() + "doesn't have a glowing nose and has an energy level of: "+ this.getEnergyLevel();
     }
     
     
@@ -83,7 +87,6 @@ public class Reindeer
     // and or formulas using totalNumOfReindeer, totalLights
     public String determineTeamHappiness()
     {
-        // TODO: code here
         return totalLights >= totalNumOfReindeer / 2 ? "These folk mad happy!" : "They sad doe"; 
     }
         
