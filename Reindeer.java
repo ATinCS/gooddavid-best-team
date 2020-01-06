@@ -40,19 +40,19 @@ public class Reindeer
     public String getName()
     {
         // TODO: code here
-        return null;
+        return name;
     }
     
     public boolean doesNoseGlow()
     {
         // TODO: code here
-        return false;
+        return noseGlows;
     }
     
     public int getEnergyLevel()
     {
         // TODO: code here
-        return 0;
+        return energy;
     }
     
     // TODO: Write a setter method for each instance variable
@@ -91,9 +91,7 @@ public class Reindeer
     // and or formulas using totalNumOfReindeer, totalLights
     public String determineTeamHappiness()
     {
-        // TODO: code here
-        
-        return "how happy is the team of reindeer"; 
+        return totalLights >= totalNumOfReindeer / 2 ? "These folk mad happy!" : "They sad doe"; 
     }
         
 }
