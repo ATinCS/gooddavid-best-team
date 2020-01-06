@@ -24,31 +24,35 @@ public class Reindeer
     public Reindeer(String theName, boolean theNoseGlows, int theEnergy)
     {
         // TO DO: initialise the reindeer's attributes
-        
-        
+        name = theName;
+        noseGlows = theNoseGlows;
+        energy = theEnergy;
         
         // TO DO: update the class (static variables)
-        
-        
+        numOfReindeer++;
+        if(theNoseGlows){
+            totalLights++;
+        }
+        totalEnergy+=theEnergy;
     }
     
     // TODO: Write a getter method for each instance variable
     public String getName()
     {
         // TODO: code here
-        return null;
+        return name;
     }
     
     public boolean doesNoseGlow()
     {
         // TODO: code here
-        return false;
+        return noseGlows;
     }
     
     public int getEnergyLevel()
     {
         // TODO: code here
-        return 0;
+        return energy;
     }
     
     // TODO: Write a setter method for each instance variable
@@ -92,7 +96,11 @@ public class Reindeer
     public String toString()
     {
         // TODO: code here
-        return "interesting description";
+        if(this.doesNoseGlow() == true) {
+       
+            return this.getName() + "has a glowing nose and an energy level of: "+ this.getEnergyLevel();
+        }
+        return this.getName() + "doesn't have a glowing nose and has an energy level of: "+ this.getEnergyLevel();
     }
     
     
@@ -101,8 +109,7 @@ public class Reindeer
     // and or formulas using totalNumOfReindeer, totalLights
     public String determineTeamHappiness()
     {
-        // TODO: code here
-        return "how happy is the team of reindeer"; 
+        return totalLights >= numOfReindeer / 2 ? "These folk mad happy!" : "They sad doe"; 
     }
         
 }
