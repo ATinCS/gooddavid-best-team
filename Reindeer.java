@@ -91,7 +91,7 @@ public class Reindeer
     // and or formulas using totalNumOfReindeer, totalLights
     public String determineTeamHappiness()
     {
-        return totalLights >= totalNumOfReindeer / 2 ? "These folk mad happy!" : "They sad doe"; 
+        return totalLights >= numOfReindeer / 2 ? "These folk mad happy!" : "They sad doe"; 
     }
         
 }
