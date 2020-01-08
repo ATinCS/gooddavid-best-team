@@ -65,31 +65,22 @@ public class Reindeer
     public void setNoseAbility(boolean nG)
     {
         // TODO: code here (don't forget to also update totalLights)
-        if (nG)
+        noseGlows = nG;
+        if(nG)
         {
-            if (!noseGlows)
-            {
-                noseGlows = true;
-                totalLights++;
-            }
-            else noseGlows = true;
+            totalLights++;
         }
         else
         {
-            if (noseGlows)
-            {
-                noseGlows = false;
-                totalLights--;
-            }
-            else noseGlows = false;
+            totalLights--;
         }
     }
     
     public void changeEnergy(int amountOfChange)
     {
         // TODO: code here (don't forget to also update totalEnergy)
-        totalEnergy+= amountOfChange;
-        energy+= amountOfChange;
+        totalEnergy += amountOfChange;
+        energy += amountOfChange;
     }
     
     // interesting description of the reindeer
